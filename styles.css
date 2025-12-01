@@ -1,0 +1,144 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Slide mặc định ẩn – giống web mẫu */
+.mySlides {
+  display: none;
+}
+
+/* Thanh topbar: gradient 3 màu Bắc–Trung–Nam */
+.mukbang-topbar {
+  background: linear-gradient(90deg, #8b0000 5%, #2e7d32 45%, #ff9f1c 100%);
+  color: #fff;
+}
+.mukbang-logo {
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.mukbang-tagline {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/* Caption trên slide */
+.mukbang-slide-caption {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 8px;
+}
+
+/* Tiêu đề 3 miền */
+.mukbang-region-title {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Card 3 miền – màu giống poster */
+.mukbang-region-card {
+  padding: 16px;
+  border-radius: 12px;
+  color: #fff;
+  text-align: left;
+  margin: 0 auto;
+  max-width: 260px;
+}
+.mukbang-region-card p {
+  margin-top: 0;
+}
+.mukbang-region-list {
+  list-style: disc;
+  margin: 8px 0 0 20px;
+  padding: 0;
+  font-size: 14px;
+}
+
+.bac {
+  color: #ffdde0;
+}
+.trung {
+  color: #d0f5e9;
+}
+.nam {
+  color: #fff3d6;
+}
+
+.mukbang-region-card.bac {
+  background: linear-gradient(180deg, #8b0000, #c62828);
+}
+.mukbang-region-card.trung {
+  background: linear-gradient(180deg, #145a32, #2e7d32);
+}
+.mukbang-region-card.nam {
+  background: linear-gradient(180deg, #ff9800, #ffb74d);
+  color: #212121;
+}
+
+/* Tour background */
+.mukbang-tour-bg {
+  background: #111827;
+  color: #f5f5f5;
+}
+
+/* Tag / badge theo vùng */
+.mukbang-bac-tag {
+  background-color: #c62828 !important;
+  color: #fff !important;
+}
+.mukbang-trung-tag {
+  background-color: #2e7d32 !important;
+  color: #fff !important;
+}
+.mukbang-nam-badge {
+  background-color: #ff9800 !important;
+  color: #111 !important;
+}
+
+/* Card combo hình */
+.mukbang-card-img {
+  width: 100%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+.mukbang-card-img.bac {
+  background-image: linear-gradient(135deg, #8b0000, #ffb74d);
+}
+.mukbang-card-img.trung {
+  background-image: linear-gradient(135deg, #145a32, #ff7043);
+}
+.mukbang-card-img.nam {
+  background-image: linear-gradient(135deg, #ff9800, #1565c0);
+}
+
+/* Button chủ đạo */
+.mukbang-btn {
+  background-color: #ffba08 !important;
+  color: #111 !important;
+}
+
+/* Modal */
+.mukbang-modal-header {
+  background: #121420 !important;
+  color: #fff !important;
+}
+.mukbang-modal-footer {
+  background: #1e2235;
+  color: #e0e0e0;
+}
+
+/* Footer */
+.mukbang-footer {
+  background: #050711;
+  color: #ccc;
+}
+.mukbang-footer i {
+  cursor: pointer;
+}
+
+/* Responsive tinh chỉnh nhẹ */
+@media (max-width: 600px) {
+  .mukbang-tagline {
+    display: none;
+  }
+}

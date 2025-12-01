@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <title>Mukbang Việt Nam 3 Miền</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- W3.CSS + fonts + icons (y chang khung mẫu) -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- CSS riêng -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-card mukbang-topbar">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right"
+       href="javascript:void(0)" onclick="toggleNav()" title="Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large mukbang-logo">MUKBANG 3 MIỀN</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">3 MIỀN</a>
+    <a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMBO GỢI Ý</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">LIÊN HỆ</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button">
+        THÊM <i class="fa fa-caret-down"></i>
+      </button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#gallery" class="w3-bar-item w3-button">Gallery</a>
+        <a href="#tour" class="w3-bar-item w3-button">Ý tưởng quay</a>
+      </div>
+    </div>
+    <span class="w3-padding-large w3-hide-small w3-right mukbang-tagline">
+      Nét văn hoá ẩm thực Bắc – Trung – Nam
+    </span>
+  </div>
+</div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo"
+     class="w3-bar-block mukbang-topbar w3-hide w3-hide-large w3-hide-medium w3-top"
+     style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNav()">3 MIỀN</a>
+  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNav()">COMBO GỢI Ý</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNav()">LIÊN HỆ</a>
+  <a href="#gallery" class="w3-bar-item w3-button w3-padding-large" onclick="toggleNav()">GALLERY</a>
+</div>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <!-- Automatic Slideshow Images – coi như GALLERY -->
+  <div class="mySlides w3-display-container w3-center" id="gallery">
+    <!-- Đổi src sang ảnh thật nếu có -->
+    <img src="img/mukbang-bac.jpg" alt="Mukbang miền Bắc" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small mukbang-slide-caption">
+      <h3>Miền Bắc</h3>
+      <p><b>Mâm cỗ Tết: bánh chưng, nem rán, giò chả, dưa hành – vị thanh, tinh tế.</b></p>
+    </div>
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/mukbang-trung.jpg" alt="Mukbang miền Trung" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small mukbang-slide-caption">
+      <h3>Miền Trung</h3>
+      <p><b>Bún bò Huế, bánh bột lọc, nem lụi – cay nồng, đậm đà, nhìn đã thấy nóng.</b></p>
+    </div>
+  </div>
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="img/mukbang-nam.jpg" alt="Mukbang miền Nam" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small mukbang-slide-caption">
+      <h3>Miền Nam</h3>
+      <p><b>Lẩu mắm miền Tây, gỏi cuốn, đồ chiên, chè – phong phú, ngọt béo, vui nhộn.</b></p>
+    </div>
+  </div>
+
+  <!-- Section: 3 Miền (Band section) -->
+  <div class="w3-container w3-content w3-center w3-padding-64"
+       style="max-width:900px" id="band">
+    <h2 class="w3-wide">MUKBANG VIỆT NAM 3 MIỀN</h2>
+    <p class="w3-opacity"><i>Ẩm thực là “nhân vật chính”, mukbang là “sân khấu”</i></p>
+    <p class="w3-justify">
+      Website này giới thiệu sự khác biệt thú vị giữa ẩm thực Bắc – Trung – Nam dưới góc nhìn mukbang:
+      cách bày mâm, màu sắc, khẩu vị và ý tưởng nội dung. Bạn có thể dùng để tham khảo khi quay video,
+      làm poster hoặc báo cáo về văn hoá ẩm thực Việt Nam.
+    </p>
+
+    <!-- 3 “thành viên band” = 3 miền, màu giống poster -->
+    <div class="w3-row w3-padding-32">
+      <!-- Bắc -->
+      <div class="w3-third">
+        <p class="mukbang-region-title bac">Miền Bắc</p>
+        <div class="mukbang-region-card bac">
+          <p>Món gợi ý:</p>
+          <ul class="mukbang-region-list">
+            <li>Bánh chưng – dưa hành</li>
+            <li>Mâm cỗ Tết Hà Nội</li>
+            <li>Bún chả, nem rán</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Trung -->
+      <div class="w3-third">
+        <p class="mukbang-region-title trung">Miền Trung</p>
+        <div class="mukbang-region-card trung">
+          <p>Món gợi ý:</p>
+          <ul class="mukbang-region-list">
+            <li>Bún bò Huế full topping</li>
+            <li>Bánh bột lọc, nem lụi</li>
+            <li>Mít trộn, ram cuốn cải</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Nam -->
+      <div class="w3-third">
+        <p class="mukbang-region-title nam">Miền Nam</p>
+        <div class="mukbang-region-card nam">
+          <p>Món gợi ý:</p>
+          <ul class="mukbang-region-list">
+            <li>Lẩu mắm miền Tây</li>
+            <li>Mẹt bún thịt nướng – gỏi cuốn</li>
+            <li>Đồ chiên xiên, chè Sài Gòn</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMBO / Ý TƯỞNG (Tour section) -->
+  <div class="mukbang-tour-bg" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:900px">
+      <h2 class="w3-wide w3-center">COMBO MUKBANG GỢI Ý</h2>
+      <p class="w3-opacity w3-center">
+        <i>Dùng làm kịch bản quay hoặc set menu cho poster.</i>
+      </p><br>
+
+      <ul class="w3-ul w3-border w3-white w3-text-grey">
+        <li class="w3-padding">
+          Combo Bắc – “Mâm cỗ Tết”
+          <span class="w3-tag mukbang-bac-tag w3-margin-left">Thanh – hài hòa</span>
+        </li>
+        <li class="w3-padding">
+          Combo Trung – “Cay nồng Huế”
+          <span class="w3-tag mukbang-trung-tag w3-margin-left">Cay – mặn mà</span>
+        </li>
+        <li class="w3-padding">
+          Combo Nam – “Miền Tây no nê”
+          <span class="w3-badge w3-right w3-margin-right mukbang-nam-badge">Hot</span>
+        </li>
+      </ul>
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <!-- Bắc -->
+        <div class="w3-third w3-margin-bottom">
+          <div class="mukbang-card-img bac"></div>
+          <div class="w3-container w3-white">
+            <p><b>Combo Bắc</b></p>
+            <p class="w3-opacity">Bánh chưng – nem rán – giò – dưa hành</p>
+            <p>Màu xanh lá – vàng – trắng, rất hợp chủ đề Tết truyền thống.</p>
+            <button class="w3-button mukbang-btn w3-margin-bottom"
+                    onclick="openTicketModal('Bắc')">
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+
+        <!-- Trung -->
+        <div class="w3-third w3-margin-bottom">
+          <div class="mukbang-card-img trung"></div>
+          <div class="w3-container w3-white">
+            <p><b>Combo Trung</b></p>
+            <p class="w3-opacity">Bún bò Huế + bánh bột lọc + nem lụi</p>
+            <p>Tông đỏ – cam – xanh, highlight độ cay và đậm vị.</p>
+            <button class="w3-button mukbang-btn w3-margin-bottom"
+                    onclick="openTicketModal('Trung')">
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+
+        <!-- Nam -->
+        <div class="w3-third w3-margin-bottom">
+          <div class="mukbang-card-img nam"></div>
+          <div class="w3-container w3-white">
+            <p><b>Combo Nam</b></p>
+            <p class="w3-opacity">Lẩu mắm + gỏi cuốn + chè</p>
+            <p>Mâm đầy, màu rực rỡ, rất “no mắt” trên video.</p>
+            <button class="w3-button mukbang-btn w3-margin-bottom"
+                    onclick="openTicketModal('Nam')">
+              Xem chi tiết
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ticket Modal (dùng làm modal mô tả combo / script mukbang) -->
+  <div id="ticketModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container mukbang-modal-header w3-center w3-padding-32">
+        <span onclick="closeTicketModal()"
+              class="w3-button mukbang-modal-header w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide">
+          <i class="fa fa-cutlery w3-margin-right"></i>
+          <span id="modalTitle">Combo mukbang</span>
+        </h2>
+      </header>
+      <div class="w3-container" id="modalBody">
+        <!-- JS sẽ chèn nội dung -->
+      </div>
+      <div class="w3-container w3-padding mukbang-modal-footer">
+        <p class="w3-small">
+          Gợi ý: bạn có thể copy nội dung này sang phần kịch bản nói trong video hoặc báo cáo.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:900px" id="contact">
+    <h2 class="w3-wide w3-center">LIÊN HỆ</h2>
+    <p class="w3-opacity w3-center"><i>Góp ý món mới hoặc ý tưởng quay mukbang.</i></p>
+
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> TP. Hồ Chí Minh, Việt Nam<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +84 000 000 000<br>
+        <i class="fa fa-envelope" style="width:30px"></i> Email: mukbang3mien@example.com<br>
+      </div>
+      <div class="w3-col m6">
+        <form action="#" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Tên" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="email" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text"
+                 placeholder="Chủ đề (ví dụ: Món mới cho miền Trung)"
+                 required name="Subject" style="margin-bottom:8px">
+          <textarea class="w3-input w3-border" placeholder="Nội dung góp ý"
+                    required name="Message" rows="3"></textarea>
+          <button class="w3-button mukbang-btn w3-section w3-right" type="submit">
+            GỬI
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map (có thể thay bằng ảnh Việt Nam) -->
+<img src="img/vietnam-map.jpg" class="w3-image w3-greyscale-min" style="width:100%" alt="Bản đồ Việt Nam">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-center w3-opacity mukbang-footer">
+  <div class="w3-xlarge w3-padding-16">
+    <i class="fa fa-youtube-play w3-hover-opacity"></i>
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+  </div>
+  <p class="w3-medium">
+    Mukbang Việt Nam 3 Miền – làm theo W3.CSS Band template
+  </p>
+</footer>
+
+<!-- JS riêng -->
+<script src="script.js"></script>
+</body>
+</html>
