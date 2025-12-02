@@ -10,7 +10,7 @@ body {
 
 /* Thanh topbar: gradient 3 màu Bắc–Trung–Nam */
 .mukbang-topbar {
-  background: color (#000000);
+  background-color: color (#000000);
   color: #fff;
 }
 .mukbang-logo {
