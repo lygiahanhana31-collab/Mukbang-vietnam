@@ -11,7 +11,7 @@ body {
 /* Thanh topbar: gradient 3 màu Bắc–Trung–Nam */
 .mukbang-topbar {
   background-color: color (#000000);
-  color: #fff;
+  color: #FDFFF5 ;
 }
 .mukbang-logo {
   font-weight: 700;
