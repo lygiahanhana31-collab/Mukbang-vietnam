@@ -64,13 +64,13 @@ body {
 }
 
 .mukbang-region-card.bac {
-  background: linear-gradient(180deg, #8b0000, #c62828);
+  background: linear-gradient(180deg, #8b0000, #e78559);
 }
 .mukbang-region-card.trung {
-  background: linear-gradient(180deg, #145a32, #2e7d32);
+  background: linear-gradient(180deg, #4d417c, #e5d4e4);
 }
 .mukbang-region-card.nam {
-  background: linear-gradient(180deg, #ff9800, #ffb74d);
+  background: linear-gradient(180deg, #cc9b59, #ece491);
   color: #212121;
 }
 
