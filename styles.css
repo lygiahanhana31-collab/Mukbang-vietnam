@@ -1,5 +1,5 @@
 body {
-  font-family: "Lato", sans-serif;
+  font-family: "Kelvinch", "Montserrat";
 }
 
 /* Slide mặc định ẩn – giống web mẫu */
@@ -9,7 +9,7 @@ body {
 
 /* Thanh topbar: gradient 3 màu Bắc–Trung–Nam */
 .mukbang-topbar {
-  background: linear-gradient(90deg, #963f2e 5%, #4d417c 45%, #cc9b59 100%);
+  background: color (black);
   color: #fff;
 }
 .mukbang-logo {
