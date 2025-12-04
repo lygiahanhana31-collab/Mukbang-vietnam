@@ -388,6 +388,15 @@ img {
     transform: translateY(-50%);
 }
 
+#north .section-heading,
+#central .section-heading,
+#south .section-heading {
+    display: block !important;
+    text-align: center !important;
+    width: fit-content;
+    margin: 10px auto !important;
+}
+
 
 /* Responsive Mobile */
 @media (max-width: 600px) {
