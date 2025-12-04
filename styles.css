@@ -116,11 +116,9 @@ img {
    3. SLIDER / HERO SECTION
    ========================================= */
 #slider {
-    position: relative;
-    margin-top: 46px;
-    padding-top: 50%;
-    background: url('[https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80](https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)') top center / cover no-repeat;
+  background-image: url("hình.png");
 }
+
 #slider .text-content {
     position: absolute;
     bottom: 47px;
