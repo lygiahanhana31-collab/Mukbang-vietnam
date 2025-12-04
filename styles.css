@@ -1,8 +1,8 @@
- RESET & GLOBAL STYLES
-    {
+ /* RESET & GLOBAL STYLES */
+* {
     margin: 0;
     padding: 0;
-    box-sizing:border-box ;
+    box-sizing: border-box;
 }
 
 body {
@@ -158,10 +158,13 @@ img {
 .section-heading {
     font-size: 30px;
     font-weight: 700;
-    text-align: center;
     letter-spacing: 4px;
-    margin: 10px 0;
     text-transform: uppercase;
+    text-align: center;
+
+    /* căn giữa block theo chiều ngang, chỉ vừa bằng chữ */
+    width: fit-content;
+    margin: 10px auto;
 }
 .section-sub-heading {
     font-size: 15px;
@@ -182,8 +185,8 @@ img {
 #north .section-heading {
     color: #963f2e;
     border-bottom: 2px solid #963f2e;
-    display: inline-block;
 }
+
 .card-north {
     background-color: #fff;
     border: 1px solid #e78559;
@@ -208,7 +211,6 @@ img {
 #central .section-heading {
     color: #4d417c;
     border-bottom: 2px solid #4d417c;
-    display: inline-block;
 }
 .card-central {
     background-color: #fff;
@@ -234,7 +236,6 @@ img {
 #south .section-heading {
     color: #5a4b43;
     border-bottom: 2px solid #5a4b43;
-    display: inline-block;
 }
 .card-south {
     background-color: #fff;
