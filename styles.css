@@ -116,7 +116,15 @@ img {
    3. SLIDER / HERO SECTION
    ========================================= */
 #slider {
-  background-image: url("hình.png");
+    position: relative;
+    margin-top: 60px;
+}
+
+.slider-img {
+    width: 100%;
+    height: 50vh; /* chiều cao banner */
+    object-fit: cover;
+    display: block;
 }
 
 #slider .text-content {
