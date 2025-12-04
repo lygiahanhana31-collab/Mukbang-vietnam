@@ -14,15 +14,30 @@ body {
 /* Utility Classes */
 .text-center { text-align: center !important; }
 .text-white { color: #fff !important; }
-.row { display: flex; flex-wrap: wrap; padding: 0 8px; }
-.col { padding: 0 8px; float: left; width: 100%; }
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -8px;             /* dùng margin âm, không padding để khỏi bị tràn width */
+}
+
+.col {
+    padding: 0 8px;
+    width: 100%;
+    box-sizing: border-box;
+    /* KHÔNG float khi đã dùng flex */
+}
 
 /* Responsive Columns */
 @media (min-width: 601px) {
-    .col.m4 { width: 33.33333%; }
-    .col.m6 { width: 50%; }
+    .col.m4 {
+        flex: 0 0 33.3333%;     /* 3 cột / hàng */
+        max-width: 33.3333%;
+    }
+    .col.m6 {
+        flex: 0 0 50%;          /* 2 cột / hàng (contact) */
+        max-width: 50%;
+    }
 }
-
 img {
     max-width: 100%;
     height: auto;
