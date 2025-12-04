@@ -1,145 +1,334 @@
+ RESET & GLOBAL STYLES
+    {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+
 body {
-  font-family: "Kelvinch", "Montserrat";
-
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    color: #333;
 }
 
-/* Slide mặc định ẩn – giống web mẫu */
-.mySlides {
-  display: none;
+/* Utility Classes */
+.text-center { text-align: center !important; }
+.text-white { color: #fff !important; }
+.row { display: flex; flex-wrap: wrap; padding: 0 8px; }
+.col { padding: 0 8px; float: left; width: 100%; }
+
+/* Responsive Columns */
+@media (min-width: 601px) {
+    .col.m4 { width: 33.33333%; }
+    .col.m6 { width: 50%; }
 }
 
-/* Thanh topbar: gradient 3 màu Bắc–Trung–Nam */
-.mukbang-topbar {
-  background-color: color (#000000);
-  color: #FDFFF5 ;
-}
-.mukbang-logo {
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-.mukbang-tagline {
-  font-size: 12px;
-  text-transform: uppercase;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-/* Caption trên slide */
-.mukbang-slide-caption {
-  background: rgba(0, 0, 0, 0.55);
-  border-radius: 8px;
+/* =========================================
+   2. NAVIGATION (HEADER)
+   ========================================= */
+#header {
+    height: 46px;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-/* Tiêu đề 3 miền */
-.mukbang-region-title {
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+#nav { display: inline-block; }
+#nav > li { display: inline-block; }
+#nav li { position: relative; }
+#nav > li > a { color: #fff; text-transform: uppercase; }
+
+#nav li a {
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
-/* Card 3 miền – màu giống poster */
-.mukbang-region-card {
-  padding: 16px;
-  border-radius: 12px;
-  color: #fff;
-  text-align: left;
-  margin: 0 auto;
-  max-width: 260px;
-}
-.mukbang-region-card p {
-  margin-top: 0;
-}
-.mukbang-region-list {
-  list-style: disc;
-  margin: 8px 0 0 20px;
-  padding: 0;
-  font-size: 14px;
+#nav > li:hover > a,
+#nav .subnav li:hover a {
+    color: #000;
+    background-color: #ccc;
 }
 
-.bac {
-  color: #ffdde0;
-}
-.trung {
-  color: #d0f5e9;
-}
-.nam {
-  color: #fff3d6;
-}
-
-.mukbang-region-card.bac {
-  background: linear-gradient(180deg, #8b0000, #e78559);
-}
-.mukbang-region-card.trung {
-  background: linear-gradient(180deg, #4d417c, #e5d4e4);
-}
-.mukbang-region-card.nam {
-  background: linear-gradient(180deg, #cc9b59, #ece491);
-  color: #212121;
-}
-
-/* Tour background */
-.mukbang-tour-bg {
-  background: #111827;
-  color: #f5f5f5;
-}
-
-/* Tag / badge theo vùng */
-.mukbang-bac-tag {
-  background-color: #c62828 !important;
-  color: #fff !important;
-}
-.mukbang-trung-tag {
-  background-color: #2e7d32 !important;
-  color: #fff !important;
-}
-.mukbang-nam-badge {
-  background-color: #ff9800 !important;
-  color: #111 !important;
-}
-
-/* Card combo hình */
-.mukbang-card-img {
-  width: 100%;
-  height: 150px;
-  background-size: cover;
-  background-position: center;
-}
-.mukbang-card-img.bac {
-  background-image: linear-gradient(135deg, #8b0000, #ffb74d);
-}
-.mukbang-card-img.trung {
-  background-image: linear-gradient(135deg, #145a32, #ff7043);
-}
-.mukbang-card-img.nam {
-  background-image: linear-gradient(135deg, #ff9800, #1565c0);
-}
-
-/* Button chủ đạo */
-.mukbang-btn {
-  background-color: #ffba08 !important;
-  color: #111 !important;
-}
-
-/* Modal */
-.mukbang-modal-header {
-  background: #121420 !important;
-  color: #fff !important;
-}
-.mukbang-modal-footer {
-  background: #1e2235;
-  color: #e0e0e0;
-}
-
-/* Footer */
-.mukbang-footer {
-  background: #050711;
-  color: #ccc;
-}
-.mukbang-footer i {
-  cursor: pointer;
-}
-
-/* Responsive tinh chỉnh nhẹ */
-@media (max-width: 600px) {
-  .mukbang-tagline {
+/* Subnav */
+#nav .subnav {
     display: none;
-  }
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    min-width: 160px;
+    list-style-type: none;
+}
+#nav .subnav a {
+    color: #000;
+    line-height: 38px;
+    padding: 0 12px;
+}
+#nav li:hover .subnav { display: block; }
+
+/* Mobile Menu Button */
+.mobile-menu-btn {
+    float: right;
+    padding: 0 21px;
+    cursor: pointer;
+    color: #fff;
+    line-height: 46px;
+    display: none;
+}
+.mobile-menu-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+/* =========================================
+   3. SLIDER / HERO SECTION
+   ========================================= */
+#slider {
+    position: relative;
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('[https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80](https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80)') top center / cover no-repeat;
+}
+#slider .text-content {
+    position: absolute;
+    bottom: 47px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    text-shadow: 0 0 10px #000;
+}
+#slider .text-heading {
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+#slider .text-description {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* =========================================
+   4. CONTENT SECTIONS (THEMES)
+   ========================================= */
+.content-section {
+    width: 800px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 16px;
+}
+.section-heading {
+    font-size: 30px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 4px;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+.section-sub-heading {
+    font-size: 15px;
+    text-align: center;
+    margin: 15px 0;
+    font-style: italic;
+    opacity: 0.8;
+}
+.about-text {
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* THEME MIỀN BẮC */
+#north { background-color: #e3c6b0; color: #853525; }
+#north .section-heading {
+    color: #963f2e;
+    border-bottom: 2px solid #963f2e;
+    display: inline-block;
+}
+.card-north {
+    background-color: #fff;
+    border: 1px solid #e78559;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    transition: transform 0.3s;
+}
+.card-north:hover { transform: translateY(-5px); }
+.btn-north {
+    background-color: #963f2e;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+}
+.btn-north:hover { background-color: #853525; }
+
+/* THEME MIỀN TRUNG */
+#central { background-color: #e5d4e4; color: #041f3c; }
+#central .section-heading {
+    color: #4d417c;
+    border-bottom: 2px solid #4d417c;
+    display: inline-block;
+}
+.card-central {
+    background-color: #fff;
+    border: 1px solid #dbbda0;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    transition: transform 0.3s;
+}
+.card-central:hover { transform: translateY(-5px); }
+.btn-central {
+    background-color: #4d417c;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+}
+.btn-central:hover { background-color: #2c244d; }
+
+/* THEME MIỀN NAM */
+#south { background-color: #ece491; color: #5a4b43; }
+#south .section-heading {
+    color: #5a4b43;
+    border-bottom: 2px solid #5a4b43;
+    display: inline-block;
+}
+.card-south {
+    background-color: #fff;
+    border: 1px solid #cc9b59;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    transition: transform 0.3s;
+}
+.card-south:hover { transform: translateY(-5px); }
+.btn-south {
+    background-color: #cc9b59;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 15px;
+}
+.btn-south:hover { background-color: #a87b3e; }
+
+/* Generic Food Image */
+.food-img { width: 100%; height: 250px; object-fit: cover; }
+.food-desc { padding: 15px; }
+.food-desc h3 { margin-bottom: 10px; font-weight: bold; }
+
+/* =========================================
+   5. CONTACT & FOOTER
+   ========================================= */
+#contact { background-color: #fff; color: #000; }
+.contact-content { margin-top: 48px; }
+.contact-info { font-size: 18px; line-height: 1.6; }
+.contact-info i { width: 30px; margin-bottom: 10px; }
+.contact-form .form-control {
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.btn-submit {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    float: right;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn-submit:hover { background-color: #ccc; color: #000; }
+
+#footer {
+    padding: 64px 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
+#footer .socials-list { font-size: 24px; }
+#footer .socials-list a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    margin: 0 5px;
+}
+#footer .socials-list a:hover { color: rgba(0, 0, 0, 0.4); }
+#footer .copyright { margin-top: 15px; color: rgba(0, 0, 0, 0.6); }
+
+/* =========================================
+   6. MODAL
+   ========================================= */
+.modal {
+    position: fixed;
+    top: 0; right: 0; bottom: 0; left: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+.modal.open { display: flex; }
+.modal-container {
+    background: #fff;
+    width: 900px;
+    max-width: calc(100% - 32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 0.5s;
+}
+.modal-header {
+    background: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+    letter-spacing: 4px;
+}
+.modal-close {
+    position: absolute;
+    right: 0; top: 0;
+    color: #fff;
+    padding: 12px;
+    cursor: pointer;
+    font-size: 20px;
+}
+.modal-close:hover { background: #ccc; color: #000; }
+.modal-body { padding: 16px; }
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-140px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive Mobile */
+@media (max-width: 600px) {
+    #nav { display: block; }
+    #nav > li { display: block; }
+    #nav > li:first-child { display: inline-block; }
+    #nav .subnav { position: relative; width: 100%; }
+    #nav .subnav a { padding-left: 40px; }
+    #nav > li:not(:first-child) { display: none; }
+    #nav.open > li { display: block; }
+    .mobile-menu-btn { display: block; }
+    .col { width: 100% !important; margin-top: 16px; }
+    .contact-form { margin-top: 16px; }
 }
