@@ -86,10 +86,18 @@ img {
 #nav .subnav {
     display: none;
     position: absolute;
+    top: 100%;          /* cho menu con nằm HẲN bên dưới thẻ <li> cha */
+    left: 0;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0,0,0,0.3);
     min-width: 160px;
     list-style-type: none;
+    z-index: 9999;      /* đảm bảo nổi lên trên slider */
+}
+
+#nav .subnav li a {
+    display: block;
+    background-color: #fff;
 }
 #nav .subnav a {
     color: #000;
