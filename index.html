@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mukbang Việt Nam - Ẩm Thực 3 Miền</title>
-    <!-- Font Awesome cho icon -->
-    <link rel="stylesheet" href="[https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css)">
-    <!-- Font Google Montserrat -->
-    <link href="[https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap](https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap)" rel="stylesheet">
-    <!-- Liên kết đến file CSS rời -->
+
+    <!-- W3.CSS -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Google Font Montserrat -->
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap">
+
+    <!-- CSS của bạn -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <!-- 1. HEADER / NAVIGATION -->
-    <div id="header">
-        <ul id="nav">
-            <li><a href="#">Trang Chủ</a></li>
-            <li><a href="#about">Giới Thiệu</a></li>
-            <li><a href="#north">Miền Bắc</a></li>
-            <li><a href="#central">Miền Trung</a></li>
-            <li><a href="#south">Miền Nam</a></li>
+    <div id="header" class="w3-top w3-bar w3-black">
+        <ul id="nav" class="w3-bar">
+            <li><a href="#" class="w3-bar-item w3-button">Trang Chủ</a></li>
+            <li><a href="#about" class="w3-bar-item w3-button">Giới Thiệu</a></li>
+            <li><a href="#north" class="w3-bar-item w3-button">Miền Bắc</a></li>
+            <li><a href="#central" class="w3-bar-item w3-button">Miền Trung</a></li>
+            <li><a href="#south" class="w3-bar-item w3-button">Miền Nam</a></li>
             <li>
-                <a href="#">Thêm <i class="fa fa-caret-down"></i></a>
+                <a href="#" class="w3-bar-item w3-button">
+                    Thêm <i class="fa-solid fa-caret-down"></i>
+                </a>
                 <ul class="subnav">
                     <li><a href="#">Review</a></li>
                     <li><a href="#">Video</a></li>
@@ -30,24 +40,25 @@
                 </ul>
             </li>
         </ul>
-        
+
         <!-- Mobile Menu Button -->
-        <div id="mobile-menu" class="mobile-menu-btn">
-            <i class="fa fa-bars"></i>
+        <div id="mobile-menu" class="mobile-menu-btn w3-hide-medium w3-hide-large">
+            <i class="fa-solid fa-bars"></i>
         </div>
     </div>
 
     <!-- 2. SLIDER / HERO -->
-    <div id="slider">
-        <img src="hình.png" class="slider-img">
-        <div class="text-content">
+    <div id="slider" class="w3-display-container">
+        <!-- Đặt file hình banner cùng thư mục: hình.png -->
+        <img src="hình.png" class="slider-img" alt="Banner Mukbang Việt Nam">
+        <div class="text-content w3-display-bottommiddle">
             <h2 class="text-heading">MUKBANG VIỆT NAM</h2>
             <p class="text-description">Hương vị quê hương, trọn vẹn từng khoảnh khắc</p>
         </div>
     </div>
 
     <!-- 3. ABOUT SECTION -->
-    <div id="about" class="content-section">
+    <div id="about" class="content-section w3-container">
         <h2 class="section-heading">Câu Chuyện Ẩm Thực</h2>
         <p class="section-sub-heading">Kết nối văn hóa qua từng món ăn</p>
         <p class="about-text">
@@ -59,25 +70,24 @@
     </div>
 
     <!-- 4. NORTH SECTION (MIỀN BẮC) -->
-    <div id="north">
+    <div id="north" class="w3-container">
         <div class="content-section">
             <h2 class="section-heading">Miền Bắc</h2>
             <p class="section-sub-heading">Thanh lịch, tinh tế và đậm đà bản sắc</p>
 
-            <div class="row">
-                <div class="col m4">
-                    <div class="card-north">
-                        <img src="phở.jpg" alt="Phở" class="food-img">
+            <div class="row w3-row-padding">
+                <div class="col m4 w3-third">
+                    <div class="card-north w3-card">
+                        <img src="phở.jpg" alt="Phở Hà Nội" class="food-img">
                         <div class="food-desc">
                             <h3>Phở Hà Nội</h3>
                             <p>Hương vị quốc hồn quốc túy với nước dùng thanh trong, bánh phở mềm và thịt bò tái chín.</p>
                             <button class="btn-north js-view-detail" data-dish="pho">Xem chi tiết</button>
-
                         </div>
                     </div>
                 </div>
-                <div class="col m4">
-                    <div class="card-north">
+                <div class="col m4 w3-third">
+                    <div class="card-north w3-card">
                         <img src="bún chả.jpg" alt="Bún Chả" class="food-img">
                         <div class="food-desc">
                             <h3>Bún Chả</h3>
@@ -86,9 +96,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col m4">
-                    <div class="card-north">
-                        <img src="bún đậu.jpg" alt="Bún Đậu" class="food-img">
+                <div class="col m4 w3-third">
+                    <div class="card-north w3-card">
+                        <img src="bún đậu.jpg" alt="Bún Đậu Mắm Tôm" class="food-img">
                         <div class="food-desc">
                             <h3>Bún Đậu Mắm Tôm</h3>
                             <p>Món ăn dân dã gây nghiện với đậu rán giòn, chả cốm và mắm tôm dậy mùi.</p>
@@ -101,15 +111,15 @@
     </div>
 
     <!-- 5. CENTRAL SECTION (MIỀN TRUNG) -->
-    <div id="central">
+    <div id="central" class="w3-container">
         <div class="content-section">
             <h2 class="section-heading">Miền Trung</h2>
             <p class="section-sub-heading">Đậm đà, cay nồng và đầy màu sắc</p>
 
-            <div class="row">
-                <div class="col m4">
-                    <div class="card-central">
-                        <img src="bún bò.jpg" alt="Bún Bò" class="food-img">
+            <div class="row w3-row-padding">
+                <div class="col m4 w3-third">
+                    <div class="card-central w3-card">
+                        <img src="bún bò.jpg" alt="Bún Bò Huế" class="food-img">
                         <div class="food-desc">
                             <h3>Bún Bò Huế</h3>
                             <p>Vị cay nồng đặc trưng, sợi bún to và chân giò heo tạo nên thương hiệu Cố Đô.</p>
@@ -117,18 +127,18 @@
                         </div>
                     </div>
                 </div>
-                <div class="col m4">
-                    <div class="card-central">
-                        <img src="mfi quảng.jpg" alt="Mì Quảng" class="food-img">
+                <div class="col m4 w3-third">
+                    <div class="card-central w3-card">
+                        <img src="mì quảng.jpg" alt="Mì Quảng" class="food-img">
                         <div class="food-desc">
                             <h3>Mì Quảng</h3>
                             <p>Sợi mì vàng óng, nước dùng ít nhưng đậm vị, ăn kèm bánh đa giòn rụm.</p>
-                           <button class="btn-central js-view-detail" data-dish="miquang">Xem chi tiết</button>
+                            <button class="btn-central js-view-detail" data-dish="miquang">Xem chi tiết</button>
                         </div>
                     </div>
                 </div>
-                <div class="col m4">
-                    <div class="card-central">
+                <div class="col m4 w3-third">
+                    <div class="card-central w3-card">
                         <img src="bánh bèo.jpg" alt="Bánh Bèo" class="food-img">
                         <div class="food-desc">
                             <h3>Bánh Bèo</h3>
@@ -142,36 +152,35 @@
     </div>
 
     <!-- 6. SOUTH SECTION (MIỀN NAM) -->
-    <div id="south">
+    <div id="south" class="w3-container">
         <div class="content-section">
             <h2 class="section-heading">Miền Nam</h2>
             <p class="section-sub-heading">Phóng khoáng, ngọt ngào và đa dạng</p>
 
-            <div class="row">
-                <div class="col m4">
-                    <div class="card-south">
+            <div class="row w3-row-padding">
+                <div class="col m4 w3-third">
+                    <div class="card-south w3-card">
                         <img src="cơm tấm.jpg" alt="Cơm Tấm" class="food-img">
                         <div class="food-desc">
                             <h3>Cơm Tấm</h3>
                             <p>Sườn nướng mật ong, bì chả và nước mắm kẹo tạo nên bữa sáng Sài Gòn kinh điển.</p>
-                           <button class="btn-south js-view-detail" data-dish="comtam">Xem chi tiết</button>
+                            <button class="btn-south js-view-detail" data-dish="comtam">Xem chi tiết</button>
                         </div>
                     </div>
                 </div>
-                <div class="col m4">
-                    <div class="card-south">
-                        <img src="hủ tíu.jpg" alt="Hủ Tiếu" class="food-img">
+                <div class="col m4 w3-third">
+                    <div class="card-south w3-card">
+                        <img src="hủ tíu.jpg" alt="Hủ Tiếu Nam Vang" class="food-img">
                         <div class="food-desc">
                             <h3>Hủ Tiếu Nam Vang</h3>
                             <p>Nước dùng ngọt từ xương, tôm tươi và thịt bằm, ăn kèm rau sống tươi mát.</p>
                             <button class="btn-south js-view-detail" data-dish="hutieu">Xem chi tiết</button>
-
                         </div>
                     </div>
                 </div>
-                <div class="col m4">
-                    <div class="card-south">
-                        <img src="bánh xèo.jpeg" alt="Bánh Xèo" class="food-img">
+                <div class="col m4 w3-third">
+                    <div class="card-south w3-card">
+                        <img src="bánh xèo.jpeg" alt="Bánh Xèo Miền Tây" class="food-img">
                         <div class="food-desc">
                             <h3>Bánh Xèo Miền Tây</h3>
                             <p>Vỏ bánh vàng rộm, to khổng lồ, nhân tôm thịt giá đỗ, cuốn rau rừng.</p>
@@ -183,54 +192,54 @@
         </div>
     </div>
 
-    <!-- SCHEDULE / TOUR DATES -->
-<div id="schedule" class="content-section">
-    <h2 class="section-heading">Lịch Mukbang</h2>
-    <p class="section-sub-heading">Lên lịch quay / đăng video theo tháng</p>
+    <!-- 7. SCHEDULE / LỊCH MUKBANG -->
+    <div id="schedule" class="content-section w3-container">
+        <h2 class="section-heading">Lịch Mukbang</h2>
+        <p class="section-sub-heading">Lên lịch quay / đăng video theo tháng</p>
 
-    <ul class="ticket-list">
-        <li>
-            September
-            <span class="sold-out">Sold out</span>
-        </li>
-        <li>
-            October
-            <span class="sold-out">Sold out</span>
-        </li>
-        <li>
-            November
-            <span class="badge">3</span>
-        </li>
-    </ul>
-</div>
+        <ul class="ticket-list w3-ul w3-white w3-card-4">
+            <li>
+                September
+                <span class="sold-out">Sold out</span>
+            </li>
+            <li>
+                October
+                <span class="sold-out">Sold out</span>
+            </li>
+            <li>
+                November
+                <span class="badge">3</span>
+            </li>
+        </ul>
+    </div>
 
-    <!-- 7. CONTACT SECTION -->
-    <div id="contact" class="content-section">
+    <!-- 8. CONTACT SECTION -->
+    <div id="contact" class="content-section w3-container">
         <h2 class="section-heading">Liên Hệ & Đóng Góp</h2>
         <p class="section-sub-heading">Gửi cho chúng tôi địa điểm ăn ngon mà bạn biết!</p>
 
-        <div class="row contact-content">
-            <div class="col m6 contact-info">
-                <p><i class="fa fa-map-marker-alt"></i> TP.HCM, Việt Nam </p>
-                <p><i class="fa fa-phone"></i> +84 123 456 789</p>
-                <p><i class="fa fa-envelope"></i> food@mukbangvn@gmail.com</p>
+        <div class="row contact-content w3-row-padding">
+            <div class="col m6 contact-info w3-half">
+                <p><i class="fa-solid fa-location-dot"></i> TP.HCM, Việt Nam</p>
+                <p><i class="fa-solid fa-phone"></i> +84 123 456 789</p>
+                <p><i class="fa-solid fa-envelope"></i> food@mukbangvn@gmail.com</p>
             </div>
-            <div class="col m6 contact-form">
+            <div class="col m6 contact-form w3-half">
                 <form action="">
-                    <div class="row">
-                        <div class="col m6">
+                    <div class="row w3-row-padding">
+                        <div class="col m6 w3-half">
                             <input type="text" placeholder="Tên của bạn" required class="form-control">
                         </div>
-                        <div class="col m6">
+                        <div class="col m6 w3-half">
                             <input type="email" placeholder="Email" required class="form-control">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row w3-row-padding">
                         <div class="col">
                             <input type="text" placeholder="Tên món ăn gợi ý" required class="form-control" style="margin-top: 8px;">
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row w3-row-padding">
                         <div class="col">
                             <textarea placeholder="Mô tả hoặc địa chỉ quán..." class="form-control" style="margin-top: 8px; height: 80px;"></textarea>
                         </div>
@@ -241,18 +250,15 @@
         </div>
     </div>
 
-    <!-- 8. FOOTER -->
-    <div id="footer">
+    <!-- 9. FOOTER -->
+    <div id="footer" class="w3-center w3-padding-64">
         <div class="socials-list">
-           <div id="footer">
-        <a href="#"><i class="fa fa-facebook-official"></i></a>
-        <a href="#"><i class="fa fa-instagram"></i></a>
-        <a href="#"><i class="fa fa-snapchat"></i></a>
-        <a href="#"><i class="fa fa-pinterest-p"></i></a>
-        <a href="#"><i class="fa fa-twitter"></i></a>
-        <a href="#"><i class="fa fa-linkedin"></i></a>
-    </div>
-
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-snapchat"></i></a>
+            <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
         </div>
         <p class="copyright">Thực hiện bởi <a href="#">Nhóm SFG</a></p>
     </div>
@@ -261,15 +267,17 @@
     <div class="modal js-modal">
         <div class="modal-container js-modal-container">
             <div class="modal-close js-modal-close">
-                <i class="fa fa-times"></i>
+                <i class="fa-solid fa-xmark"></i>
             </div>
             <header class="modal-header">
-                <i class="fa fa-utensils" style="margin-right: 16px;"></i>
+                <i class="fa-solid fa-utensils" style="margin-right: 16px;"></i>
                 Thông Tin Món Ăn
             </header>
             <div class="modal-body">
                 <p>Nội dung chi tiết về món ăn sẽ được cập nhật tại đây.</p>
-                <p style="margin-top: 15px; font-style: italic;">"Không có tình yêu nào chân thật hơn tình yêu đối với thức ăn."</p>
+                <p style="margin-top: 15px; font-style: italic;">
+                    "Không có tình yêu nào chân thật hơn tình yêu đối với thức ăn."
+                </p>
             </div>
         </div>
     </div>
@@ -278,4 +286,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
