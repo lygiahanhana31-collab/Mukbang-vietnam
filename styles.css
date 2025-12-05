@@ -75,7 +75,10 @@ img {
     font-weight: bold;
     transition: 0.3s;
 }
-
+#header.w3-bar,
+#nav.w3-bar {
+    overflow: visible;
+}
 #nav > li:hover > a,
 #nav .subnav li:hover a {
     color: #000;
